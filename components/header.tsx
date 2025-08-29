@@ -5,17 +5,8 @@ export default async function Header() {
   const session = await auth();
 
   return (
-    <nav className="h-15 justify-start flex p-2">
-      <div className="flex gap-5 items-center md:flex-row-reverse justify-between md:w-fit w-full">
-        {session && (
-          <Image
-            width={40}
-            height={40}
-            src={`${session ? session.user?.image : "/"}`}
-            alt=""
-            className="border rounded-full"
-          />
-        )}
+    <nav className="h-12 md:h-15 md:justify-end justify-start flex px-2">
+      <div className="flex gap-5 items-center justify-between md:w-fit w-full">
         {session ? (
           <form
             action={async () => {
@@ -38,6 +29,16 @@ export default async function Header() {
               LogIn
             </button>
           </form>
+        )}
+
+        {session && (
+          <Image
+            width={40}
+            height={40}
+            src={`${session ? session.user?.image : "/"}`}
+            alt=""
+            className="border rounded-full"
+          />
         )}
       </div>
     </nav>
