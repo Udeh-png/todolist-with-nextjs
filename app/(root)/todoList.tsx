@@ -48,7 +48,7 @@ export default function TodoList({ session }: { session: Session | null }) {
     });
   }
   return (
-    <div className="md:p-5 md:w-1/2 rounded-2xl h-[93vh] mx-auto md:h-130 md:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.5)]  p-2 relative bg-[rgb(236,229,207)]">
+    <div className="md:p-5 md:w-1/2 rounded-2xl h-[93vh] mx-auto md:h-[89vh] border md:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.5)]  p-2 relative bg-[rgb(236,229,207)]">
       <div className="mb-5 flex justify-between items-top">
         <div>
           <h1 className="text-[clamp(16px,3vw,36px)]">
