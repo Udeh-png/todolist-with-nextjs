@@ -18,7 +18,7 @@ Includes features like google social login, edit task and much more
 
 ## 🔗 Live Demo
 
-<!-- [Click me](https://myamazonapp.vercel.app) -->
+[Click me](https://mytodolistimpl.vercel.app)
 
 ## 📂 Installation
 
