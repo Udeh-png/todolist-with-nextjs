@@ -7,13 +7,15 @@ export default async function Header() {
   return (
     <nav className="h-15 justify-end flex p-5">
       <div className="flex gap-5 items-center flex-row-reverse justify-between md:w-fit w-full">
-        <Image
-          width={40}
-          height={40}
-          src={`${session ? session.user?.image : "/"}`}
-          alt=""
-          className="border rounded-full"
-        />
+        {session && (
+          <Image
+            width={40}
+            height={40}
+            src={`${session ? session.user?.image : "/"}`}
+            alt=""
+            className="border rounded-full"
+          />
+        )}
         {session ? (
           <form
             action={async () => {
