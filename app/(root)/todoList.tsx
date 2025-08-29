@@ -48,16 +48,16 @@ export default function TodoList({ session }: { session: Session | null }) {
     });
   }
   return (
-    <div className="md:p-5 md:w-1/2 rounded-2xl h-[93vh] mx-auto md:h-[89vh] md:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.5)] p-2 relative bg-[rgb(236,229,207)]">
+    <div className="md:p-5 md:w-1/2 rounded-2xl h-[85vh] mx-auto md:h-[89vh] md:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.5)] p-2 relative md:bg-[rgb(236,229,207)]">
       <div className="mb-5 flex justify-between items-top">
         <div>
-          <h1 className="text-[clamp(16px,3vw,36px)]">
+          <h1 className="text-[clamp(18px,3vw,36px)]">
             Welcome,{" "}
             {userName ? userName.slice(0, userName.indexOf(" ")) : "Stranger"}
             👋🏾
           </h1>
-          <p className="pl-1 text-[clamp(10px,2vw,16px)]">
-            what we doing today.
+          <p className="pl-1 text-[clamp(12px,2vw,16px)]">
+            {session ? "what we doing today." : "Please sign in"}
           </p>
         </div>
         <button
@@ -90,7 +90,7 @@ export default function TodoList({ session }: { session: Session | null }) {
             <p>No tasks added</p>
           )
         ) : (
-          <div>Login to view tasks</div>
+          <div>Signin to view tasks</div>
         )}
       </div>
 
