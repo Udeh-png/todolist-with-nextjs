@@ -5,7 +5,7 @@ export default async function Header() {
   const session = await auth();
 
   return (
-    <nav className="h-15 justify-end flex p-5">
+    <nav className="h-15 justify-start flex p-5">
       <div className="flex gap-5 items-center flex-row-reverse justify-between md:w-fit w-full">
         {session && (
           <Image
