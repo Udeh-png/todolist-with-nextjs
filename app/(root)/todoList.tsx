@@ -62,9 +62,10 @@ export default function TodoList({ session }: { session: Session | null }) {
         </div>
         <button
           onClick={() => {
-            setTasksState([]);
-
-            localStorage.setItem("tasks", JSON.stringify([]));
+            if (session) {
+              setTasksState([]);
+              localStorage.setItem("tasks", JSON.stringify([]));
+            }
           }}
           className="my-button"
         >
