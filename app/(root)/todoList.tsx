@@ -18,7 +18,7 @@ export default function TodoList({ session }: { session: Session | null }) {
 
   function handleNewTask(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (value.trim() === "") {
+    if (value.trim() === "" || !session) {
       return;
     }
     setTasksState((prevTasks: Task[]) => [
